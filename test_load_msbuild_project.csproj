@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFrameworks>net8;net472</TargetFrameworks>
+    <TargetFrameworks>net6;net8;net472</TargetFrameworks>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,8 +13,16 @@
 
   <ItemGroup>
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
-    <PackageReference Include="Microsoft.Build" Version="17.9.5" ExcludeAssets="runtime" />
-    <PackageReference Include="Microsoft.Build.Utilities.Core" Version="17.9.5" ExcludeAssets="runtime" />
     <PackageReference Include="Microsoft.Build.Locator" Version="1.7.8" />
   </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' != 'net6'">
+    <PackageReference Include="Microsoft.Build" Version="17.9.5" ExcludeAssets="runtime" />
+    <PackageReference Include="Microsoft.Build.Utilities.Core" Version="17.9.5" ExcludeAssets="runtime" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'net6'">
+    <PackageReference Include="System.Collections.Immutable" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Build" Version="17.3.2" ExcludeAssets="runtime" />
+    <PackageReference Include="Microsoft.Build.Utilities.Core" Version="17.3.2" ExcludeAssets="runtime" />
+  </ItemGroup>
+
 </Project>
