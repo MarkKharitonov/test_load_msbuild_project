@@ -1,0 +1,18 @@
+{
+  "FileVersion": 2,
+  "Id": "6c60056f-cfbc-4133-a538-9890c600096b",
+  "Items": [
+    {
+      "Id": "0fee4e29-5a2b-47f5-b8d0-f209fa3482f1",
+      "Command": "sample_net8.proj"
+    },
+    {
+      "Id": "cd0a9b1f-2299-4ee1-8bf9-e1f36e5181d2",
+      "Command": "sample_net472_sdk.proj"
+    },
+    {
+      "Id": "4a865943-353b-4409-8cda-dfb4524751e4",
+      "Command": "sample_net472_legacy.proj"
+    }
+  ]
+}

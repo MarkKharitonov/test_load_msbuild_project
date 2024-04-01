@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "test_load_msbuild_project": {
+      "commandName": "Project",
+      "commandLineArgs": "sample_net8.proj"
+    }
+  }
+}
