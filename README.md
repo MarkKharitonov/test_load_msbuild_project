@@ -593,3 +593,6 @@ LOG: Attempting download of new URL file:///C:/Program Files/Microsoft Visual St
    at Program.Run(String csprojFileName) in C:\work\test_load_msbuild_project\Program.cs:line 33
    at Program.Main(String[] args) in C:\work\test_load_msbuild_project\Program.cs:line 24
 ```
+
+# Root cause
+The folder **C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Current\Bin\SdkResolvers\Microsoft.DotNet.MSBuildSdkResolver** on my machine had a file which did not belong there - System.Collections.Immutable.dll. I must have copied it to workaround an issue and never removed it.
